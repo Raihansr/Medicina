@@ -1,0 +1,647 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bottomSheet_id"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_250sdp"
+    android:orientation="vertical"
+    android:background="@color/colorPrimary"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+    app:behavior_hideable="false"
+    app:behavior_peekHeight="@dimen/button_Height">
+
+    <!-- BottomSheet Bar -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="@dimen/card_Elevation_Small"
+        app:cardBackgroundColor="@android:color/transparent">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_Height"
+            android:gravity="center_vertical"
+            android:background="@color/colorFab">
+
+            <androidx.appcompat.widget.SearchView
+                android:id="@+id/medicine_search_button"
+                android:layout_weight="4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:queryHint="Search Here..."
+                android:inputType="text"
+                android:background="@color/colorWhite"/>
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/medicine_add_button"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:visibility="visible"
+                app:srcCompat="@drawable/ic_add_medicine"
+                android:padding="@dimen/padding_Small"
+                android:layout_gravity="center"
+                android:background="@android:color/transparent"
+                tools:ignore="ContentDescription,NestedWeights" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.cardview.widget.CardView>
+
+    <!-- Medicine Items -->
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/medicine_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="@dimen/margin_Medium">
+
+            <!-- Medicine Id -->
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/medicine_id_etxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:enabled="false"
+                tools:ignore="LabelFor,TextFields" />
+
+
+            <!-- Medicine Name -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_Medium">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/medicine_name_etxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/button_Height"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="@dimen/et_Margin"
+                    android:background="@drawable/shape_curve_right"
+                    android:gravity="center"
+                    android:paddingStart="@dimen/padding_Large"
+                    android:paddingEnd="@dimen/padding_Small"
+                    android:inputType="text|textCapSentences"
+                    android:maxLength="32"
+                    android:maxLines="1"
+                    android:hint="Medicine Name..."
+                    android:textColor="@color/colorBlack"
+                    android:textStyle="bold"
+                    android:fontFamily="serif-monospace"
+                    android:textSize="@dimen/text_Size_Medium"
+                    tools:ignore="HardcodedText,LabelFor" />
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/medicine_name_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/shape_round"
+                    app:srcCompat="@drawable/ic_medicine_name"
+                    tools:ignore="ContentDescription" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/medicine_name_btn_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:orientation="horizontal"
+                    android:layout_marginStart="@dimen/et_Margin"
+                    android:gravity="center_vertical"
+                    android:layout_centerVertical="true">
+
+                    <ImageButton
+                        android:id="@+id/medicine_name_clear_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/ic_delete"
+                        android:background="@drawable/shape_round_btn"
+                        tools:ignore="ContentDescription" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </RelativeLayout>
+
+
+            <!-- Medicine Power -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_Medium">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/button_Height"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="@dimen/et_Margin"
+                    android:paddingStart="@dimen/padding_Too_Large"
+                    android:paddingEnd="@dimen/padding_Small"
+                    android:background="@drawable/shape_curve_right"
+                    tools:ignore="RtlSymmetry">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/medicine_power_etxt"
+                        android:layout_weight="1.25"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/transparent"
+                        android:gravity="center"
+                        android:inputType="numberDecimal"
+                        android:maxLength="6"
+                        android:maxLines="1"
+                        android:hint="Power..."
+                        android:textColor="@color/colorBlack"
+                        android:textStyle="bold"
+                        android:fontFamily="serif-monospace"
+                        android:textSize="@dimen/text_Size_Medium"
+                        tools:ignore="HardcodedText,LabelFor" />
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/medicine_power_unit_tv"
+                        android:layout_weight="0.75"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/transparent"
+                        android:drawableEnd="@drawable/ic_arrow"
+                        android:drawablePadding="@dimen/padding_Small"
+                        android:clickable="true"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:gravity="center"
+                        android:inputType="none"
+                        android:textColor="@color/colorBlack"
+                        android:textStyle="bold"
+                        android:fontFamily="serif-monospace"
+                        android:textSize="@dimen/text_Size_Medium"
+                        tools:ignore="HardcodedText,KeyboardInaccessibleWidget,LabelFor,RtlSymmetry,TextFields" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/medicine_power_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/shape_round"
+                    app:srcCompat="@drawable/ic_medicine_power"
+                    tools:ignore="ContentDescription" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/medicine_power_btn_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:orientation="horizontal"
+                    android:layout_marginStart="@dimen/et_Margin"
+                    android:gravity="center_vertical"
+                    android:layout_centerVertical="true">
+
+                    <androidx.appcompat.widget.AppCompatImageButton
+                        android:id="@+id/medicine_power_clear_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/ic_delete"
+                        android:background="@drawable/shape_round_btn"
+                        tools:ignore="ContentDescription" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </RelativeLayout>
+
+
+            <!-- Medicine Type -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_Medium">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/medicine_type_etxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/button_Height"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="@dimen/et_Margin"
+                    android:background="@drawable/shape_curve_right"
+                    android:drawableEnd="@drawable/ic_arrow"
+                    android:drawablePadding="@dimen/padding_Small"
+                    android:clickable="true"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:textIsSelectable="false"
+                    android:gravity="center"
+                    android:paddingStart="@dimen/padding_Large"
+                    android:paddingEnd="@dimen/padding_Small"
+                    android:inputType="none"
+                    android:maxLength="24"
+                    android:maxLines="1"
+                    android:hint="Choose Type..."
+                    android:textColor="@color/colorBlack"
+                    android:textStyle="bold"
+                    android:fontFamily="serif-monospace"
+                    android:textSize="@dimen/text_Size_Medium"
+                    tools:ignore="HardcodedText,KeyboardInaccessibleWidget,LabelFor" />
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/medicine_type_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/shape_round"
+                    app:srcCompat="@drawable/ic_medicine_type"
+                    tools:ignore="ContentDescription" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/medicine_type_btn_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:orientation="horizontal"
+                    android:layout_marginStart="@dimen/et_Margin"
+                    android:gravity="center_vertical"
+                    android:layout_centerVertical="true">
+
+                    <androidx.appcompat.widget.AppCompatImageButton
+                        android:id="@+id/medicine_type_clear_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/ic_delete"
+                        android:background="@drawable/shape_round_btn"
+                        tools:ignore="ContentDescription" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </RelativeLayout>
+
+
+            <!-- Medicine Shift -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_Medium">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/medicine_shift_etxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/button_Height"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="@dimen/et_Margin"
+                    android:background="@drawable/shape_curve_right"
+                    android:drawableEnd="@drawable/ic_arrow"
+                    android:drawablePadding="@dimen/padding_Small"
+                    android:clickable="true"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:textIsSelectable="false"
+                    android:gravity="center"
+                    android:paddingStart="@dimen/padding_Large"
+                    android:paddingEnd="@dimen/padding_Small"
+                    android:inputType="none"
+                    android:maxLength="7"
+                    android:maxLines="1"
+                    android:hint="Choose Shift..."
+                    android:textColor="@color/colorBlack"
+                    android:textStyle="bold"
+                    android:fontFamily="serif-monospace"
+                    android:textSize="@dimen/text_Size_Medium"
+                    tools:ignore="HardcodedText,KeyboardInaccessibleWidget,LabelFor" />
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/medicine_shift_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/shape_round"
+                    app:srcCompat="@drawable/ic_medicine_shift"
+                    tools:ignore="ContentDescription" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/medicine_shift_btn_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:orientation="horizontal"
+                    android:layout_marginStart="@dimen/et_Margin"
+                    android:gravity="center_vertical"
+                    android:layout_centerVertical="true">
+
+                    <androidx.appcompat.widget.AppCompatImageButton
+                        android:id="@+id/medicine_shift_clear_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/ic_delete"
+                        android:background="@drawable/shape_round_btn"
+                        tools:ignore="ContentDescription" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </RelativeLayout>
+
+
+            <!-- Medicine Time -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_Medium">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/medicine_time_etxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/button_Height"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="@dimen/et_Margin"
+                    android:background="@drawable/shape_curve_right"
+                    android:clickable="true"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:textIsSelectable="false"
+                    android:gravity="center"
+                    android:paddingStart="@dimen/padding_Large"
+                    android:paddingEnd="@dimen/padding_Small"
+                    android:inputType="none"
+                    android:maxLength="8"
+                    android:maxLines="1"
+                    android:hint="Reminder Time..."
+                    android:textColor="@color/colorBlack"
+                    android:textStyle="bold"
+                    android:fontFamily="serif-monospace"
+                    android:textSize="@dimen/text_Size_Medium"
+                    tools:ignore="HardcodedText,KeyboardInaccessibleWidget,LabelFor" />
+
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/medicine_time_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/shape_round"
+                    app:srcCompat="@drawable/ic_medicine_time"
+                    tools:ignore="ContentDescription" />
+
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/medicine_time_btn_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:orientation="horizontal"
+                    android:layout_marginStart="@dimen/et_Margin"
+                    android:gravity="center_vertical"
+                    android:layout_centerVertical="true">
+
+
+                    <androidx.appcompat.widget.AppCompatImageButton
+                        android:id="@+id/medicine_alarm_on_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        app:srcCompat="@drawable/ic_alarm_on"
+                        android:background="@drawable/shape_round_btn"
+                        tools:ignore="ContentDescription" />
+
+
+                    <androidx.appcompat.widget.AppCompatImageButton
+                        android:id="@+id/medicine_alarm_off_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="visible"
+                        app:srcCompat="@drawable/ic_alarm_off"
+                        android:background="@drawable/shape_round_btn"
+                        tools:ignore="ContentDescription" />
+
+
+                    <androidx.appcompat.widget.AppCompatImageButton
+                        android:id="@+id/medicine_time_clear_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/ic_delete"
+                        android:background="@drawable/shape_round_btn"
+                        tools:ignore="ContentDescription" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+            </RelativeLayout>
+
+
+            <!-- Medicine Notes -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_Too_Large">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/medicine_notes_etxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="@dimen/et_Margin"
+                    android:background="@drawable/shape_rect_round"
+                    android:gravity="center"
+                    android:paddingStart="@dimen/padding_Large"
+                    android:paddingEnd="@dimen/padding_Small"
+                    android:inputType="textMultiLine|textAutoCorrect|textAutoComplete|textCapSentences"
+                    android:scrollbars="vertical"
+                    android:fadeScrollbars="true"
+                    android:scrollbarSize="@dimen/_1sdp"
+                    android:maxLines="3"
+                    android:maxLength="64"
+                    android:hint="Add Notes..."
+                    android:textColor="@color/colorBlack"
+                    android:textStyle="bold"
+                    android:fontFamily="serif-monospace"
+                    android:textSize="@dimen/text_Size_Medium"
+                    tools:ignore="HardcodedText,LabelFor" />
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/medicine_notes_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/shape_round"
+                    app:srcCompat="@drawable/ic_notes"
+                    tools:ignore="ContentDescription" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/medicine_notes_btn_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:orientation="horizontal"
+                    android:layout_marginStart="@dimen/et_Margin"
+                    android:gravity="center_vertical"
+                    android:layout_centerVertical="true">
+
+                    <androidx.appcompat.widget.AppCompatImageButton
+                        android:id="@+id/medicine_notes_clear_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/ic_delete"
+                        android:background="@drawable/shape_round_btn"
+                        tools:ignore="ContentDescription" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </RelativeLayout>
+
+
+            <!-- Add Button -->
+            <RelativeLayout
+                android:id="@+id/add_medicine"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_Height"
+                android:visibility="visible"
+                android:gravity="center_vertical"
+                android:background="@drawable/shape_round_dialog"
+                android:layout_marginStart="@dimen/margin_Too_Large"
+                android:layout_marginEnd="@dimen/margin_Too_Large"
+                android:layout_marginBottom="@dimen/margin_Medium">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="visible"
+                    android:gravity="center"
+                    android:padding="@dimen/padding_Small"
+                    android:layout_centerInParent="true">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginEnd="@dimen/margin_Small"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:background="@android:color/transparent"
+                        android:drawableEnd="@drawable/ic_medicine_add"
+                        tools:ignore="ButtonStyle,HardcodedText"  />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/add_medicine_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginStart="@dimen/margin_Small"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:background="@android:color/transparent"
+                        android:fontFamily="serif-monospace"
+                        android:textAllCaps="false"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/text_Size_Medium"
+                        android:textStyle="bold"
+                        android:text="Add"
+                        tools:ignore="ButtonStyle,HardcodedText" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/clear_add_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_round_dialog"
+                    app:srcCompat="@drawable/ic_delete"
+                    android:visibility="visible"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="@dimen/margin_Small"
+                    android:padding="@dimen/padding_Small"
+                    tools:ignore="ContentDescription" />
+
+            </RelativeLayout>
+
+
+            <!-- Update Button -->
+            <RelativeLayout
+                android:id="@+id/update_medicine"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_Height"
+                android:visibility="gone"
+                android:gravity="center_vertical"
+                android:background="@drawable/shape_round_dialog"
+                android:layout_marginStart="@dimen/margin_Too_Large"
+                android:layout_marginEnd="@dimen/margin_Too_Large"
+                android:layout_marginBottom="@dimen/margin_Medium">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="visible"
+                    android:gravity="center"
+                    android:padding="@dimen/padding_Small"
+                    android:layout_centerInParent="true">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginEnd="@dimen/margin_Small"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:background="@android:color/transparent"
+                        android:drawableEnd="@drawable/ic_medicine_update"
+                        tools:ignore="ButtonStyle,HardcodedText"  />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/update_medicine_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginStart="@dimen/margin_Small"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:background="@android:color/transparent"
+                        android:fontFamily="serif-monospace"
+                        android:textAllCaps="false"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/text_Size_Medium"
+                        android:textStyle="bold"
+                        android:text="Update"
+                        tools:ignore="ButtonStyle,HardcodedText" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/cancel_update_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_round_dialog"
+                    app:srcCompat="@drawable/ic_cancel_update"
+                    android:visibility="visible"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="@dimen/margin_Small"
+                    android:padding="@dimen/padding_Small"
+                    tools:ignore="ContentDescription" />
+
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

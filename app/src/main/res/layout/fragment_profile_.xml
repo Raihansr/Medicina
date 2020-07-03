@@ -1,0 +1,939 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorPaste"
+    tools:context=".fragment.Fragment_Profile">
+
+    <!-- Profile -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingStart="@dimen/padding_Medium"
+        android:paddingEnd="@dimen/padding_Medium"
+        android:paddingBottom="@dimen/tab_Height"
+        android:clipToPadding="false">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!-- Profile Name -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_Small"
+                android:layout_marginBottom="@dimen/margin_Medium">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/profile_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="@dimen/button_Height"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="@dimen/et_Margin"
+                    android:background="@drawable/shape_rect_round"
+                    android:fontFamily="sans-serif"
+                    android:gravity="center"
+                    android:paddingStart="@dimen/padding_Large"
+                    android:paddingEnd="@dimen/padding_Medium"
+                    android:inputType="textMultiLine|textCapWords"
+                    android:maxLength="32"
+                    android:maxLines="2"
+                    android:hint="Name..."
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_Size_Medium"
+                    tools:ignore="HardcodedText,LabelFor" />
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/name_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/shape_round"
+                    app:srcCompat="@drawable/ic_name"
+                    tools:ignore="ContentDescription" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/name_btn_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:orientation="horizontal"
+                    android:layout_marginStart="@dimen/et_Margin"
+                    android:gravity="center_vertical"
+                    android:layout_centerVertical="true">
+
+                    <androidx.appcompat.widget.AppCompatImageButton
+                        android:id="@+id/name_update_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/ic_edit"
+                        android:background="@drawable/shape_round_btn"
+                        tools:ignore="ContentDescription" />
+
+                    <androidx.appcompat.widget.AppCompatImageButton
+                        android:id="@+id/name_delete_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/ic_delete"
+                        android:background="@drawable/shape_round_btn"
+                        tools:ignore="ContentDescription" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </RelativeLayout>
+
+
+            <!-- Profile Sex -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_Medium">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/profile_sex"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="@dimen/button_Height"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="@dimen/et_Margin"
+                    android:background="@drawable/shape_curve_right"
+                    android:drawableEnd="@drawable/ic_arrow"
+                    android:drawablePadding="@dimen/padding_Small"
+                    android:clickable="true"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:textIsSelectable="false"
+                    android:fontFamily="sans-serif"
+                    android:gravity="center"
+                    android:paddingStart="@dimen/padding_Too_Large"
+                    android:paddingEnd="@dimen/padding_Small"
+                    android:inputType="none"
+                    android:maxLines="1"
+                    android:hint="Sex..."
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_Size_Medium"
+                    tools:ignore="HardcodedText,KeyboardInaccessibleWidget,LabelFor" />
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/sex_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/shape_round"
+                    app:srcCompat="@drawable/ic_gender"
+                    tools:ignore="ContentDescription" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/sex_btn_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:orientation="horizontal"
+                    android:layout_marginStart="@dimen/et_Margin"
+                    android:gravity="center_vertical"
+                    android:layout_centerVertical="true">
+
+                    <androidx.appcompat.widget.AppCompatImageButton
+                        android:id="@+id/sex_update_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/ic_edit"
+                        android:background="@drawable/shape_round_btn"
+                        tools:ignore="ContentDescription" />
+
+                    <androidx.appcompat.widget.AppCompatImageButton
+                        android:id="@+id/sex_delete_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/ic_delete"
+                        android:background="@drawable/shape_round_btn"
+                        tools:ignore="ContentDescription" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </RelativeLayout>
+
+
+            <!-- Profile BirthDate -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_Medium">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/profile_birthDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="@dimen/button_Height"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="@dimen/et_Margin"
+                    android:background="@drawable/shape_curve_right"
+                    android:clickable="true"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:textIsSelectable="false"
+                    android:fontFamily="sans-serif"
+                    android:gravity="center"
+                    android:paddingStart="@dimen/padding_Too_Large"
+                    android:paddingEnd="@dimen/padding_Small"
+                    android:inputType="none"
+                    android:hint="Date Of Birth..."
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_Size_Medium"
+                    tools:ignore="HardcodedText,KeyboardInaccessibleWidget,LabelFor,TextFields" />
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/birth_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/shape_round"
+                    app:srcCompat="@drawable/ic_birthdate"
+                    tools:ignore="ContentDescription" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/birth_btn_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:orientation="horizontal"
+                    android:layout_marginStart="@dimen/et_Margin"
+                    android:gravity="center_vertical"
+                    android:layout_centerVertical="true">
+
+                    <androidx.appcompat.widget.AppCompatImageButton
+                        android:id="@+id/birth_update_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/ic_edit"
+                        android:background="@drawable/shape_round_btn"
+                        tools:ignore="ContentDescription" />
+
+                    <androidx.appcompat.widget.AppCompatImageButton
+                        android:id="@+id/birth_delete_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/ic_delete"
+                        android:background="@drawable/shape_round_btn"
+                        tools:ignore="ContentDescription" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </RelativeLayout>
+
+
+            <!-- Profile Age -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_Medium">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/profile_age"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="@dimen/button_Height"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="@dimen/et_Margin"
+                    android:background="@drawable/shape_curve_right"
+                    android:fontFamily="sans-serif"
+                    android:gravity="center"
+                    android:paddingStart="@dimen/padding_Too_Large"
+                    android:paddingEnd="@dimen/padding_Small"
+                    android:inputType="number"
+                    android:maxLines="1"
+                    android:maxLength="3"
+                    android:hint="Age..."
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_Size_Medium"
+                    tools:ignore="HardcodedText,LabelFor" />
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/age_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/shape_round"
+                    app:srcCompat="@drawable/ic_age"
+                    tools:ignore="ContentDescription" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/age_btn_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:orientation="horizontal"
+                    android:layout_marginStart="@dimen/et_Margin"
+                    android:gravity="center_vertical"
+                    android:layout_centerVertical="true">
+
+                    <androidx.appcompat.widget.AppCompatImageButton
+                        android:id="@+id/age_update_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/ic_edit"
+                        android:background="@drawable/shape_round_btn"
+                        tools:ignore="ContentDescription" />
+
+                    <androidx.appcompat.widget.AppCompatImageButton
+                        android:id="@+id/age_delete_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/ic_delete"
+                        android:background="@drawable/shape_round_btn"
+                        tools:ignore="ContentDescription" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </RelativeLayout>
+
+
+            <!-- Profile Blood Group -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_Medium">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/profile_bloodGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="@dimen/button_Height"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="@dimen/et_Margin"
+                    android:background="@drawable/shape_curve_right"
+                    android:drawableEnd="@drawable/ic_arrow"
+                    android:drawablePadding="@dimen/padding_Small"
+                    android:clickable="true"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:textIsSelectable="false"
+                    android:fontFamily="sans-serif"
+                    android:gravity="center"
+                    android:paddingStart="@dimen/padding_Too_Large"
+                    android:paddingEnd="@dimen/padding_Small"
+                    android:inputType="none"
+                    android:maxLines="1"
+                    android:hint="Blood Group..."
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_Size_Medium"
+                    tools:ignore="HardcodedText,KeyboardInaccessibleWidget,LabelFor" />
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/blood_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/shape_round"
+                    app:srcCompat="@drawable/ic_bloodgroup"
+                    tools:ignore="ContentDescription" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/blood_btn_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:orientation="horizontal"
+                    android:layout_marginStart="@dimen/et_Margin"
+                    android:gravity="center_vertical"
+                    android:layout_centerVertical="true">
+
+                    <androidx.appcompat.widget.AppCompatImageButton
+                        android:id="@+id/blood_view_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/ic_view"
+                        android:background="@drawable/shape_round_btn"
+                        tools:ignore="ContentDescription" />
+
+                    <androidx.appcompat.widget.AppCompatImageButton
+                        android:id="@+id/blood_update_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/ic_edit"
+                        android:background="@drawable/shape_round_btn"
+                        tools:ignore="ContentDescription" />
+
+                    <androidx.appcompat.widget.AppCompatImageButton
+                        android:id="@+id/blood_delete_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/ic_delete"
+                        android:background="@drawable/shape_round_btn"
+                        tools:ignore="ContentDescription" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </RelativeLayout>
+
+
+            <!-- Profile Height -->
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="@dimen/margin_Small">
+
+                <RelativeLayout
+                    android:id="@+id/height_parent_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="7">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/profile_Height_Metric_Layout"
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="@dimen/et_Margin"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="@dimen/et_Margin"
+                        android:layout_marginEnd="@dimen/margin_Small"
+                        android:paddingStart="@dimen/padding_Too_Large"
+                        android:paddingEnd="@dimen/padding_Small"
+                        android:background="@drawable/shape_curve_left">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/profile_height_cm"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:background="@android:color/transparent"
+                            android:fontFamily="sans-serif"
+                            android:gravity="center"
+                            android:inputType="numberDecimal"
+                            android:maxLength="6"
+                            android:maxLines="1"
+                            android:textColor="@color/colorBlack"
+                            android:textStyle="bold"
+                            android:textSize="20sp"
+                            tools:ignore="LabelFor" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/profile_height_cm_tv"
+                            android:layout_weight="0.5"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:fontFamily="serif-monospace"
+                            android:textColor="@color/colorBlack"
+                            android:hint="cm"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/profile_Height_Imperial_Layout"
+                        android:visibility="visible"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/button_Height"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="@dimen/et_Margin"
+                        android:layout_marginEnd="@dimen/margin_Small"
+                        android:paddingStart="@dimen/padding_Too_Large"
+                        android:paddingEnd="@dimen/padding_Small"
+                        android:background="@drawable/shape_curve_left">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            app:cardCornerRadius="@dimen/card_Radius_Small"
+                            android:layout_margin="@dimen/margin_Small"
+                            android:layout_gravity="center"
+                            android:layout_height="match_parent">
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/profile_height_ft"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@android:color/transparent"
+                                android:fontFamily="sans-serif"
+                                android:gravity="center"
+                                android:inputType="number"
+                                android:maxLength="1"
+                                android:maxLines="1"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/text_Size_Medium"
+                                tools:ignore="LabelFor" />
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/profile_height_ft_tv"
+                            android:layout_weight="0.5"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:fontFamily="serif-monospace"
+                            android:textColor="@color/colorBlack"
+                            android:hint="ft"
+                            android:textSize="@dimen/text_Size_Medium"
+                            tools:ignore="HardcodedText" />
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            app:cardCornerRadius="@dimen/card_Radius_Small"
+                            android:layout_margin="@dimen/margin_Small"
+                            android:layout_gravity="center"
+                            android:layout_height="match_parent">
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/profile_height_inch"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@android:color/transparent"
+                                android:fontFamily="sans-serif"
+                                android:gravity="center"
+                                android:inputType="numberDecimal"
+                                android:maxLength="5"
+                                android:maxLines="1"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/text_Size_Medium"
+                                tools:ignore="LabelFor" />
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/profile_height_in_tv"
+                            android:layout_weight="0.5"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:fontFamily="serif-monospace"
+                            android:textColor="@color/colorBlack"
+                            android:hint="in"
+                            android:textSize="@dimen/text_Size_Medium"
+                            tools:ignore="HardcodedText" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.AppCompatImageButton
+                        android:id="@+id/height_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/shape_round"
+                        app:srcCompat="@drawable/ic_height"
+                        tools:ignore="ContentDescription" />
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/height_btn_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:orientation="horizontal"
+                        android:layout_marginStart="@dimen/et_Margin"
+                        android:gravity="center_vertical"
+                        android:layout_centerVertical="true">
+
+                        <androidx.appcompat.widget.AppCompatImageButton
+                            android:id="@+id/height_update_btn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@drawable/ic_edit"
+                            android:background="@drawable/shape_round_btn"
+                            tools:ignore="ContentDescription" />
+
+                        <androidx.appcompat.widget.AppCompatImageButton
+                            android:id="@+id/height_delete_btn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@drawable/ic_delete"
+                            android:background="@drawable/shape_round_btn"
+                            tools:ignore="ContentDescription" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </RelativeLayout>
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/profile_height_Mode"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/button_Height"
+                    app:srcCompat="@drawable/ic_arrow"
+                    android:background="@drawable/shape_curve_right"
+                    tools:ignore="ContentDescription" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+            <!-- Profile Weight -->
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="@dimen/margin_Medium"
+                android:layout_marginTop="@dimen/margin_Small">
+
+                <RelativeLayout
+                    android:id="@+id/weight_parent_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="7">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/profile_Weight_Metric_Layout"
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/et_Margin"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="@dimen/et_Margin"
+                        android:layout_marginEnd="@dimen/margin_Small"
+                        android:paddingStart="@dimen/padding_Too_Large"
+                        android:paddingEnd="@dimen/padding_Small"
+                        android:background="@drawable/shape_curve_left">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/profile_weight_kg"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:background="@android:color/transparent"
+                            android:fontFamily="sans-serif"
+                            android:gravity="center"
+                            android:inputType="numberDecimal"
+                            android:maxLength="6"
+                            android:maxLines="1"
+                            android:textColor="@color/colorBlack"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/text_Size_Default"
+                            tools:ignore="LabelFor" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/profile_weight_kg_tv"
+                            android:layout_weight="0.5"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:clickable="false"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:fontFamily="serif-monospace"
+                            android:textColor="@color/colorBlack"
+                            android:hint="kg"
+                            android:textSize="@dimen/text_Size_Default"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/profile_Weight_Imperial_Layout"
+                        android:visibility="visible"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/button_Height"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="@dimen/et_Margin"
+                        android:layout_marginEnd="@dimen/margin_Small"
+                        android:paddingStart="@dimen/padding_Too_Large"
+                        android:paddingEnd="@dimen/padding_Small"
+                        android:background="@drawable/shape_curve_left">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            app:cardCornerRadius="@dimen/card_Radius_Small"
+                            android:layout_margin="@dimen/margin_Small"
+                            android:layout_gravity="center"
+                            android:layout_height="match_parent">
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/profile_weight_st"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@android:color/transparent"
+                                android:fontFamily="sans-serif"
+                                android:gravity="center"
+                                android:inputType="number"
+                                android:maxLength="2"
+                                android:maxLines="1"
+                                android:textColor="@color/colorBlack"
+                                android:textStyle="bold"
+                                android:textSize="@dimen/text_Size_Medium"
+                                tools:ignore="LabelFor" />
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/profile_weight_st_tv"
+                            android:layout_weight="0.5"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:focusableInTouchMode="false"
+                            android:fontFamily="serif-monospace"
+                            android:textColor="@color/colorBlack"
+                            android:hint="st"
+                            android:textSize="@dimen/text_Size_Medium"
+                            tools:ignore="HardcodedText" />
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            app:cardCornerRadius="@dimen/card_Radius_Small"
+                            android:layout_margin="@dimen/margin_Small"
+                            android:layout_gravity="center"
+                            android:layout_height="match_parent">
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/profile_weight_lb"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@android:color/transparent"
+                                android:fontFamily="sans-serif"
+                                android:gravity="center"
+                                android:inputType="numberDecimal"
+                                android:maxLength="5"
+                                android:maxLines="1"
+                                android:textColor="@color/colorBlack"
+                                android:textStyle="bold"
+                                android:textSize="@dimen/text_Size_Medium"
+                                tools:ignore="LabelFor"/>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/profile_weight_lb_tv"
+                            android:layout_weight="0.5"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:clickable="false"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:fontFamily="serif-monospace"
+                            android:textColor="@color/colorBlack"
+                            android:hint="lb"
+                            android:textSize="@dimen/text_Size_Medium"
+                            tools:ignore="HardcodedText" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.AppCompatImageButton
+                        android:id="@+id/weight_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/shape_round"
+                        app:srcCompat="@drawable/ic_weight"
+                        tools:ignore="ContentDescription" />
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/weight_btn_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:orientation="horizontal"
+                        android:layout_marginStart="@dimen/et_Margin"
+                        android:gravity="center_vertical"
+                        android:layout_centerVertical="true">
+
+                        <androidx.appcompat.widget.AppCompatImageButton
+                            android:id="@+id/weight_update_btn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@drawable/ic_edit"
+                            android:background="@drawable/shape_round_btn"
+                            tools:ignore="ContentDescription" />
+
+                        <androidx.appcompat.widget.AppCompatImageButton
+                            android:id="@+id/weight_delete_btn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@drawable/ic_delete"
+                            android:background="@drawable/shape_round_btn"
+                            tools:ignore="ContentDescription" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </RelativeLayout>
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/profile_weight_Mode"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/button_Height"
+                    app:srcCompat="@drawable/ic_arrow"
+                    android:background="@drawable/shape_curve_right"
+                    tools:ignore="ContentDescription" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+            <!-- Profile Address -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_Medium">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/profile_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="@dimen/button_Height"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="@dimen/button_Height"
+                    android:background="@drawable/shape_rect_round"
+                    android:fontFamily="sans-serif"
+                    android:gravity="center"
+                    android:paddingStart="@dimen/padding_Too_Large"
+                    android:paddingEnd="@dimen/padding_Small"
+                    android:paddingTop="@dimen/padding_Small"
+                    android:paddingBottom="@dimen/padding_Small"
+                    android:inputType="textMultiLine|textCapWords"
+                    android:maxLength="255"
+                    android:hint="Address..."
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_Size_Medium"
+                    tools:ignore="HardcodedText,LabelFor" />
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/address_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/shape_round"
+                    app:srcCompat="@drawable/ic_address"
+                    tools:ignore="ContentDescription" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/address_btn_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:orientation="horizontal"
+                    android:layout_marginStart="@dimen/et_Margin"
+                    android:gravity="center_vertical"
+                    android:layout_centerVertical="true">
+
+                    <androidx.appcompat.widget.AppCompatImageButton
+                        android:id="@+id/address_update_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/ic_edit"
+                        android:background="@drawable/shape_round_btn"
+                        tools:ignore="ContentDescription" />
+
+                    <androidx.appcompat.widget.AppCompatImageButton
+                        android:id="@+id/address_delete_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/ic_delete"
+                        android:background="@drawable/shape_round_btn"
+                        tools:ignore="ContentDescription" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </RelativeLayout>
+
+
+            <!-- Profile Notes -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/profile_notes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/et_Margin"
+                    android:background="@drawable/shape_rect_round"
+                    android:fontFamily="sans-serif"
+                    android:gravity="center"
+                    android:hint="Add Notes..."
+                    android:inputType="textMultiLine|textCapSentences|textAutoCorrect|textAutoComplete"
+                    android:maxLength="255"
+                    android:minHeight="@dimen/button_Height"
+                    android:paddingStart="@dimen/padding_Too_Large"
+                    android:paddingTop="@dimen/padding_Small"
+                    android:paddingEnd="@dimen/padding_Small"
+                    android:paddingBottom="@dimen/padding_Small"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_Size_Medium"
+                    tools:ignore="HardcodedText,LabelFor" />
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/notes_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/shape_round"
+                    app:srcCompat="@drawable/ic_description"
+                    tools:ignore="ContentDescription" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/notes_btn_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/et_Margin"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <androidx.appcompat.widget.AppCompatImageButton
+                        android:id="@+id/notes_update_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_round_btn"
+                        app:srcCompat="@drawable/ic_edit"
+                        tools:ignore="ContentDescription,TooManyViews" />
+
+                    <androidx.appcompat.widget.AppCompatImageButton
+                        android:id="@+id/notes_delete_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_round_btn"
+                        app:srcCompat="@drawable/ic_delete"
+                        tools:ignore="ContentDescription,TooManyViews" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- Bottom Tab -->
+    <include
+        android:id="@+id/tabLayout_id"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/tab_Height"
+        layout="@layout/layout_tab"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

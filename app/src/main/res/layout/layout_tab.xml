@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.tabs.TabLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/CustomTab"
+    android:layout_width="wrap_content"
+    android:layout_height="@dimen/tab_Height"
+    android:background="@color/colorAccent"
+    app:tabMode="scrollable"
+    app:tabGravity="fill"
+    app:tabTextColor="@color/colorPaste"
+    android:elevation="@dimen/card_Elevation_Small"
+    app:tabRippleColor="@null"
+    app:tabSelectedTextColor="@color/colorWhite"
+    app:tabIndicatorHeight="0dp">
+
+    <com.google.android.material.tabs.TabItem
+        android:id="@+id/add_Tab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:icon="@drawable/ic_add_tab"
+        android:text="Add"
+        tools:ignore="HardcodedText" />
+
+    <com.google.android.material.tabs.TabItem
+        android:id="@+id/bsa_Tab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:icon="@drawable/ic_bsa_tab"
+        android:text="BSA"
+        tools:ignore="HardcodedText" />
+
+    <com.google.android.material.tabs.TabItem
+        android:id="@+id/bmi_Tab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:icon="@drawable/ic_bmi_tab"
+        android:text="BMI"
+        tools:ignore="HardcodedText" />
+
+    <com.google.android.material.tabs.TabItem
+        android:id="@+id/bmr_Tab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:icon="@drawable/ic_bmr_tab"
+        android:text="BMR"
+        tools:ignore="HardcodedText" />
+
+    <com.google.android.material.tabs.TabItem
+        android:id="@+id/hr_Tab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:icon="@drawable/ic_hr_tab"
+        android:text="HR"
+        tools:ignore="HardcodedText" />
+
+    <com.google.android.material.tabs.TabItem
+        android:id="@+id/bp_Tab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:icon="@drawable/ic_bp_tab"
+        android:text="BP"
+        tools:ignore="HardcodedText" />
+
+    <com.google.android.material.tabs.TabItem
+        android:id="@+id/share_Tab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:icon="@drawable/ic_share_tab"
+        android:text="Share"
+        tools:ignore="HardcodedText" />
+
+</com.google.android.material.tabs.TabLayout>

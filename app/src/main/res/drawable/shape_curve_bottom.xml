@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<shape
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <stroke android:color="@color/colorWhite" android:width="@dimen/_1sdp"/>
+
+    <corners
+        android:bottomLeftRadius="@dimen/card_Radius_Large"
+        android:bottomRightRadius="@dimen/card_Radius_Extra_Large"/>
+
+    <gradient
+        android:startColor="@color/colorAccent"
+        android:centerColor="@color/colorDarkPaste"
+        android:endColor="@color/colorAccent"
+        android:gradientRadius="@dimen/_120sdp"
+        android:type="radial" />
+</shape>

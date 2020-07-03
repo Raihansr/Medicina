@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#96e4d9</color>
+    <color name="colorPaste">#96e4d9</color>
+    <color name="colorAccent">#1BC7B1</color>
+    <color name="colorDarkPaste">#7ce9d9</color>
+    <color name="colorFab">#af1BC7B1</color>
+    <color name="color_transparent">#321BC7B1</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorBlack">#004e43</color>
+    <color name="colorHint">#e0faf6</color>
+
+    <color name="SeekBar_Color_One">#c10600</color>
+    <color name="SeekBar_Color_Two">#ff1e00</color>
+    <color name="SeekBar_Color_Three">#ff4800</color>
+    <color name="SeekBar_Color_Four">#fc7200</color>
+    <color name="SeekBar_Color_Five">#feaa01</color>
+    <color name="SeekBar_Color_Six">#fde400</color>
+    <color name="SeekBar_Color_Seven">#ccff00</color>
+    <color name="SeekBar_Color_Eight">#7bff00</color>
+    <color name="SeekBar_Color_Nine">#00ff04</color>
+    <color name="SeekBar_Color_Ten">#00d612</color>
+    <color name="SeekBar_Color_Eleven">#00d612</color>
+    <color name="SeekBar_Color_Twelve">#00ff04</color>
+    <color name="SeekBar_Color_Thirteen">#7bff00</color>
+    <color name="SeekBar_Color_Fourteen">#ccff00</color>
+    <color name="SeekBar_Color_Fifteen">#fde400</color>
+    <color name="SeekBar_Color_Sixteen">#feaa01</color>
+    <color name="SeekBar_Color_Seventeen">#fc7200</color>
+    <color name="SeekBar_Color_Eighteen">#ff4800</color>
+    <color name="SeekBar_Color_Nineteen">#ff1e00</color>
+    <color name="SeekBar_Color_Twenty">#c10600</color>
+</resources>

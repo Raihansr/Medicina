@@ -1,0 +1,50 @@
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPaste</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <!-- Custom Popup -->
+        <item name="android:popupMenuStyle">@style/PopupStyle</item>
+
+        <!-- Remove White Screen When Activity Start -->
+        <item name="android:windowDisablePreview">true</item>
+
+        <!-- Activity Start/End With Animation -->
+        <item name="android:windowEnterAnimation">@android:anim/fade_in</item>
+        <item name="android:windowExitAnimation">@android:anim/fade_out</item>
+
+    </style>
+
+
+    <!-- Popup Menu -->
+    <style name="PopupStyle" parent="ThemeOverlay.AppCompat.Dark">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:popupBackground">@drawable/shape_rect_round</item>
+        <item name="android:popupAnimationStyle">@android:animator/fade_in</item>
+    </style>
+
+
+    <style name="CustomDialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:windowBackground">@drawable/shape_snackbar</item>
+        <item name="colorAccent">@android:color/white</item>
+        <item name="android:textColorPrimary">@android:color/white</item>
+    </style>
+
+
+    <!--Custom Tab-->
+    <style name="CustomTab" parent="Base.Widget.Design.TabLayout">
+        <item name="tabTextAppearance">@style/CustomTabTextAppearance</item>
+    </style>
+
+    <style name="CustomTabTextAppearance" parent="TextAppearance.AppCompat.Button">
+        <item name="android:textSize">@dimen/text_Size_Extra_Small</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+</resources>

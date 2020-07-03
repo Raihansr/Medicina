@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="icon_Size_Dialog">@dimen/_48sdp</dimen>
+    <dimen name="icon_Size_Extra_Large">@dimen/_40sdp</dimen>
+    <dimen name="icon_Size_Large">@dimen/_32sdp</dimen>
+    <dimen name="icon_Size_Medium">@dimen/_28sdp</dimen>
+    <dimen name="icon_Size_Small">@dimen/_24sdp</dimen>
+    <dimen name="icon_Size_Default">@dimen/_20sdp</dimen>
+    <dimen name="icon_Size_Extra_Small">@dimen/_18sdp</dimen>
+
+    <dimen name="text_Size_Extra_Large">@dimen/_20ssp</dimen>
+    <dimen name="text_Size_Large">@dimen/_18ssp</dimen>
+    <dimen name="text_Size_Default">@dimen/_16ssp</dimen>
+    <dimen name="text_Size_Medium">@dimen/_14ssp</dimen>
+    <dimen name="text_Size_Small">@dimen/_12ssp</dimen>
+    <dimen name="text_Size_Extra_Small">@dimen/_10ssp</dimen>
+
+    <dimen name="button_Height">@dimen/_36sdp</dimen>
+    <dimen name="indicator_Height">@dimen/_1sdp</dimen>
+    <dimen name="border_Small">@dimen/_1sdp</dimen>
+    <dimen name="border_Large">@dimen/_6sdp</dimen>
+    <dimen name="view_Width_Small">@dimen/_1sdp</dimen>
+    <dimen name="view_Width_Large">@dimen/_2sdp</dimen>
+    <dimen name="view_Height_Small">@dimen/_1sdp</dimen>
+    <dimen name="view_Height_Large">@dimen/_2sdp</dimen>
+    <dimen name="divider_Expense_Width">@dimen/_80sdp</dimen>
+
+    <dimen name="tab_Height">@dimen/_46sdp</dimen>
+    <dimen name="et_Margin">@dimen/_42sdp</dimen>
+    <dimen name="margin_Too_Small">@dimen/_2sdp</dimen>
+    <dimen name="margin_Small">@dimen/_4sdp</dimen>
+    <dimen name="margin_Medium">@dimen/_8sdp</dimen>
+    <dimen name="margin_Large">@dimen/_12sdp</dimen>
+    <dimen name="margin_Too_Large">@dimen/_16sdp</dimen>
+
+    <dimen name="padding_Too_Small">@dimen/_2sdp</dimen>
+    <dimen name="padding_Small">@dimen/_4sdp</dimen>
+    <dimen name="padding_Medium">@dimen/_8sdp</dimen>
+    <dimen name="padding_Large">@dimen/_12sdp</dimen>
+    <dimen name="padding_Too_Large">@dimen/_16sdp</dimen>
+
+    <dimen name="card_Elevation_Extra_Large">@dimen/_10sdp</dimen>
+    <dimen name="card_Elevation_Large">@dimen/_8sdp</dimen>
+    <dimen name="card_Elevation_Default">@dimen/_4sdp</dimen>
+    <dimen name="card_Elevation_Small">@dimen/_2sdp</dimen>
+    <dimen name="card_Elevation_Extra_Small">@dimen/_1sdp</dimen>
+
+    <dimen name="card_Radius_Extra_Large">@dimen/_24sdp</dimen>
+    <dimen name="card_Radius_Large">@dimen/_20sdp</dimen>
+    <dimen name="card_Radius_Medium">@dimen/_16sdp</dimen>
+    <dimen name="card_Radius_Default">@dimen/_12sdp</dimen>
+    <dimen name="card_Radius_Small">@dimen/_8sdp</dimen>
+    <dimen name="card_Radius_Extra_Small">@dimen/_4sdp</dimen>
+
+    <dimen name="fading_Edge_Length">@dimen/_16sdp</dimen>
+
+</resources>

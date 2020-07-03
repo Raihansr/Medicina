@@ -1,0 +1,26 @@
+<resources>
+
+    <string name="app_name">Medicina</string>
+    <string name="profile">Profile</string>
+    <string name="medicine">Medicine</string>
+    <string name="dismiss">Dismiss</string>
+
+    <string name="clock">&#9200;</string>
+
+    <string name="hr_description">Your pulse is your heart rate, or the number of times your heart beats in one minute. Pulse rates vary from person to person. Your pulse is lower when you are at rest and increases when you exercise. Knowing how to take your pulse can help you evaluate your exercise program.</string>
+
+    <string name="arhr_description">Find your pulse with your fingers, not your thumb, while lying in bed before you get up in the morning. Count your pulse for 10 seconds and multiply by six.</string>
+
+    <string name="bmi_description">Your BMI is an important number to use when assessing how much fat you have and how much fat you have to lose. This can give you an idea of your weight related disease risk by placing you in a particular weight category.</string>
+
+    <string name="bp_description">Blood pressure test measures the pressure in your arteries as your heart pumps.\n
+        High blood pressure (Hypertension) can put a strain on your arteries and organs, which can increase your risk of developing serious problems such as heart attacks and strokes.\n
+        Low blood pressure (Hypotension) isn\'t usually as serious, although it can cause dizziness and fainting in some people.\n
+        You should have a blood pressure test performed at least once every two years, starting at age 18. If you\'re age 40 or older or if you\'re age 18 to 39 with a high risk of high blood pressure.</string>
+
+    <string name="bmr_description">The human body requires a significant amount of energy just to function regularly. Each day, your body must breathe, blink, circulate blood, control body temperature, grow new cells, support brain and nerve activity and contract muscles.\n
+        BMR shows you the number of calories which reflects how much energy your body requires to support vital body functions if, hypothetically, you were resting in bed for an entire day. So, if you know your BMR, you can determine how to reduce your caloric intake, and weight loss will naturally follow.</string>
+
+    <string name="bsa_description">The body surface area is the measured or calculated surface area of a human body. Body surface area plays a key role in several medical fields, including cancer chemotherapy, transplantology, burn treatment and toxicology. BSA is often a major factor in the determination of the course of treatment and drug dosage.</string>
+
+</resources>

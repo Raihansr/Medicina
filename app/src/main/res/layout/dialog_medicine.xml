@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:layout_gravity="center"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/view_btn_id"
+        android:layout_width="@dimen/icon_Size_Dialog"
+        android:layout_height="@dimen/icon_Size_Dialog"
+        android:layout_marginEnd="@dimen/margin_Medium"
+        app:srcCompat="@drawable/ic_view_dialog"
+        android:background="@drawable/shape_round_dialog"
+        tools:ignore="ContentDescription" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/update_btn_id"
+        android:layout_width="@dimen/icon_Size_Dialog"
+        android:layout_height="@dimen/icon_Size_Dialog"
+        android:layout_marginEnd="@dimen/margin_Medium"
+        app:srcCompat="@drawable/ic_update_dialog"
+        android:background="@drawable/shape_round_dialog"
+        tools:ignore="ContentDescription" />
+
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/delete_btn_id"
+        android:layout_width="@dimen/icon_Size_Dialog"
+        android:layout_height="@dimen/icon_Size_Dialog"
+        app:srcCompat="@drawable/ic_delete_dialog"
+        android:background="@drawable/shape_round_dialog"
+        tools:ignore="ContentDescription" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

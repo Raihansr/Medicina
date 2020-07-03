@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPaste"
+    tools:context=".fragment.Fragment_Medicine">
+
+    <ListView
+        android:id="@+id/info_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_Small"
+        android:layout_marginEnd="@dimen/margin_Small"
+        android:layout_marginTop="@dimen/margin_Small"
+        android:layout_marginBottom="@dimen/et_Margin"
+        android:dividerHeight="@dimen/_8sdp"
+        android:divider="@color/colorPaste"
+        android:scrollbars="none"
+        android:focusable="false"
+        android:focusableInTouchMode="false"/>
+
+    <!-- Footer -->
+    <include layout="@layout/layout_medicine_bs"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

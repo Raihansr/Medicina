@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/bmr_activity_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        android:padding="@dimen/padding_Medium"
+        android:background="@drawable/shape_rect_round_dialog">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/bmr_activities_title_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/padding_Too_Large"
+            android:paddingBottom="@dimen/padding_Medium"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"
+            android:fontFamily="serif-monospace"
+            android:text="Select Your Activity Level"
+            android:gravity="center"
+            android:textSize="@dimen/text_Size_Medium"
+            tools:ignore="HardcodedText" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_marginStart="@dimen/margin_Too_Small"
+            android:layout_marginEnd="@dimen/margin_Too_Small"
+            android:background="@color/colorWhite"/>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioGroup
+                android:id="@+id/radioGroup_activity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_Medium">
+
+                <RadioButton
+                    android:id="@+id/activity_one_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_Too_Small"
+                    android:layout_marginEnd="@dimen/margin_Too_Small"
+                    android:layout_marginTop="@dimen/margin_Small"
+                    android:layout_marginBottom="@dimen/margin_Small"
+                    android:textColor="@color/colorWhite"
+                    android:padding="@dimen/padding_Medium"
+                    android:background="@drawable/shape_rect_round_dialog"
+                    android:textStyle="bold"
+                    android:fontFamily="serif-monospace"
+                    android:text="I am sedentary\n(little or no exercise)"
+                    android:gravity="center"
+                    android:textSize="@dimen/text_Size_Small"
+                    tools:ignore="HardcodedText" />
+
+                <RadioButton
+                    android:id="@+id/activity_two_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_Too_Small"
+                    android:layout_marginEnd="@dimen/margin_Too_Small"
+                    android:layout_marginTop="@dimen/margin_Small"
+                    android:layout_marginBottom="@dimen/margin_Small"
+                    android:textColor="@color/colorWhite"
+                    android:padding="@dimen/padding_Medium"
+                    android:background="@drawable/shape_rect_round_dialog"
+                    android:textStyle="bold"
+                    android:fontFamily="serif-monospace"
+                    android:text="I am lightly active\n(light exercise or sports 1-3 days per week)"
+                    android:gravity="center"
+                    android:textSize="@dimen/text_Size_Small"
+                    tools:ignore="HardcodedText" />
+
+                <RadioButton
+                    android:id="@+id/activity_three_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_Too_Small"
+                    android:layout_marginEnd="@dimen/margin_Too_Small"
+                    android:layout_marginTop="@dimen/margin_Small"
+                    android:layout_marginBottom="@dimen/margin_Small"
+                    android:textColor="@color/colorWhite"
+                    android:padding="@dimen/padding_Medium"
+                    android:background="@drawable/shape_rect_round_dialog"
+                    android:textStyle="bold"
+                    android:fontFamily="serif-monospace"
+                    android:text="I am moderately active\n(moderate exercise or sports 3-5 days per week)"
+                    android:gravity="center"
+                    android:textSize="@dimen/text_Size_Small"
+                    tools:ignore="HardcodedText" />
+
+                <RadioButton
+                    android:id="@+id/activity_four_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_Too_Small"
+                    android:layout_marginEnd="@dimen/margin_Too_Small"
+                    android:layout_marginTop="@dimen/margin_Small"
+                    android:layout_marginBottom="@dimen/margin_Small"
+                    android:textColor="@color/colorWhite"
+                    android:padding="@dimen/padding_Medium"
+                    android:background="@drawable/shape_rect_round_dialog"
+                    android:textStyle="bold"
+                    android:fontFamily="serif-monospace"
+                    android:text="I am very active\n(hard exercise or sports 6-7 days per week)"
+                    android:gravity="center"
+                    android:textSize="@dimen/text_Size_Small"
+                    tools:ignore="HardcodedText" />
+
+                <RadioButton
+                    android:id="@+id/activity_five_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_Too_Small"
+                    android:layout_marginEnd="@dimen/margin_Too_Small"
+                    android:layout_marginTop="@dimen/margin_Small"
+                    android:layout_marginBottom="@dimen/margin_Small"
+                    android:textColor="@color/colorWhite"
+                    android:padding="@dimen/padding_Medium"
+                    android:background="@drawable/shape_rect_round_dialog"
+                    android:textStyle="bold"
+                    android:fontFamily="serif-monospace"
+                    android:text="I am super active\n(very hard exercise or sports and a physical job)"
+                    android:gravity="center"
+                    android:textSize="@dimen/text_Size_Small"
+                    tools:ignore="HardcodedText" />
+
+            </RadioGroup>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/bmr_result_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/margin_Medium"
+        android:padding="@dimen/padding_Medium"
+        android:background="@drawable/shape_rect_round_dialog">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/bmr_title_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/padding_Medium"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"
+            android:fontFamily="serif-monospace"
+            android:text="Basal Metabolic Rate\n(BMR)"
+            android:gravity="center"
+            android:textSize="@dimen/text_Size_Default"
+            tools:ignore="HardcodedText" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_marginStart="@dimen/margin_Too_Small"
+            android:layout_marginEnd="@dimen/margin_Too_Small"
+            android:background="@color/colorWhite"/>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <androidx.core.widget.NestedScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/bmr_desc_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/padding_Medium"
+                        android:textColor="@color/colorWhite"
+                        android:textStyle="bold"
+                        android:fontFamily="serif-monospace"
+                        android:text="@string/bmr_description"
+                        android:gravity="center"
+                        android:textSize="@dimen/text_Size_Medium"
+                        tools:ignore="HardcodedText" />
+
+                </androidx.core.widget.NestedScrollView>
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/margin_Too_Small"
+                    android:layout_marginEnd="@dimen/margin_Too_Small"
+                    android:layout_marginTop="@dimen/margin_Medium"
+                    android:layout_marginBottom="@dimen/margin_Medium"
+                    app:cardCornerRadius="@dimen/card_Radius_Large"
+                    app:cardElevation="@dimen/card_Elevation_Small"
+                    app:cardBackgroundColor="@color/color_transparent">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="@dimen/button_Height"
+                        android:orientation="horizontal"
+                        android:background="@drawable/shape_rect_round_dialog"
+                        tools:ignore="UselessParent">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/bmr_title"
+                            android:layout_weight="2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:textStyle="bold"
+                            android:hint="Your BMR"
+                            android:textColorHint="@color/colorHint"
+                            android:fontFamily="serif-monospace"
+                            android:textSize="@dimen/text_Size_Medium"
+                            tools:ignore="HardcodedText,LabelFor" />
+
+                        <View
+                            android:layout_weight=".025"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/button_Height"
+                            android:background="@color/colorWhite"/>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/bmr_output"
+                            android:layout_weight="3"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:padding="@dimen/padding_Small"
+                            android:textColor="@color/colorWhite"
+                            android:textStyle="bold"
+                            android:fontFamily="serif-monospace"
+                            android:textSize="@dimen/text_Size_Medium"
+                            tools:ignore="HardcodedText,LabelFor" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </androidx.cardview.widget.CardView>
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/bmr_Nutritional_title_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/padding_Medium"
+                    android:textColor="@color/colorWhite"
+                    android:textStyle="bold"
+                    android:fontFamily="serif-monospace"
+                    android:text="Nutritional Needs"
+                    android:gravity="center"
+                    android:textSize="@dimen/text_Size_Default"
+                    tools:ignore="HardcodedText" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"
+                    android:layout_marginStart="@dimen/margin_Too_Large"
+                    android:layout_marginEnd="@dimen/margin_Too_Large"
+                    android:background="@color/colorWhite"/>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/margin_Too_Small"
+                    android:layout_marginEnd="@dimen/margin_Too_Small"
+                    android:layout_marginTop="@dimen/margin_Large"
+                    android:layout_marginBottom="@dimen/margin_Medium"
+                    app:cardCornerRadius="@dimen/card_Radius_Large"
+                    app:cardElevation="@dimen/card_Elevation_Small"
+                    app:cardBackgroundColor="@color/color_transparent">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="@drawable/shape_rect_round_dialog"
+                        tools:ignore="UselessParent">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/bmr_Carbohydrates_title_id"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:layout_gravity="center_horizontal"
+                            android:background="@drawable/shape_bottom_round_dialog"
+                            android:paddingStart="@dimen/padding_Too_Large"
+                            android:paddingEnd="@dimen/padding_Too_Large"
+                            android:paddingTop="@dimen/padding_Small"
+                            android:paddingBottom="@dimen/padding_Small"
+                            android:textStyle="bold"
+                            android:hint="Carbohydrates"
+                            android:textColorHint="@color/colorHint"
+                            android:fontFamily="serif-monospace"
+                            android:textSize="@dimen/text_Size_Default"
+                            tools:ignore="HardcodedText,LabelFor" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/bmr_Carbohydrates_content_id"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:paddingTop="@dimen/padding_Small"
+                            android:paddingBottom="@dimen/padding_Medium"
+                            android:paddingStart="@dimen/padding_Medium"
+                            android:paddingEnd="@dimen/padding_Medium"
+                            android:textColor="@color/colorWhite"
+                            android:textStyle="bold"
+                            android:fontFamily="serif-monospace"
+                            android:textSize="@dimen/text_Size_Medium"
+                            tools:ignore="HardcodedText,LabelFor" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/margin_Too_Small"
+                    android:layout_marginEnd="@dimen/margin_Too_Small"
+                    android:layout_marginTop="@dimen/margin_Medium"
+                    android:layout_marginBottom="@dimen/margin_Medium"
+                    app:cardCornerRadius="@dimen/card_Radius_Large"
+                    app:cardElevation="@dimen/card_Elevation_Small"
+                    app:cardBackgroundColor="@color/color_transparent">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="@drawable/shape_rect_round_dialog"
+                        tools:ignore="UselessParent">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/bmr_Proteins_title_id"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:layout_gravity="center_horizontal"
+                            android:background="@drawable/shape_bottom_round_dialog"
+                            android:paddingStart="@dimen/padding_Too_Large"
+                            android:paddingEnd="@dimen/padding_Too_Large"
+                            android:paddingTop="@dimen/padding_Small"
+                            android:paddingBottom="@dimen/padding_Small"
+                            android:textStyle="bold"
+                            android:hint="Proteins"
+                            android:textColorHint="@color/colorHint"
+                            android:fontFamily="serif-monospace"
+                            android:textSize="@dimen/text_Size_Default"
+                            tools:ignore="HardcodedText,LabelFor" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/bmr_Proteins_content_id"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:paddingTop="@dimen/padding_Small"
+                            android:paddingBottom="@dimen/padding_Medium"
+                            android:paddingStart="@dimen/padding_Medium"
+                            android:paddingEnd="@dimen/padding_Medium"
+                            android:textColor="@color/colorWhite"
+                            android:textStyle="bold"
+                            android:fontFamily="serif-monospace"
+                            android:textSize="@dimen/text_Size_Medium"
+                            tools:ignore="HardcodedText,LabelFor" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/margin_Too_Small"
+                    android:layout_marginEnd="@dimen/margin_Too_Small"
+                    android:layout_marginTop="@dimen/margin_Medium"
+                    android:layout_marginBottom="@dimen/margin_Medium"
+                    app:cardCornerRadius="@dimen/card_Radius_Large"
+                    app:cardElevation="@dimen/card_Elevation_Small"
+                    app:cardBackgroundColor="@color/color_transparent">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="@drawable/shape_rect_round_dialog"
+                        tools:ignore="UselessParent">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/bmr_Fats_title_id"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:layout_gravity="center_horizontal"
+                            android:background="@drawable/shape_bottom_round_dialog"
+                            android:paddingStart="@dimen/padding_Too_Large"
+                            android:paddingEnd="@dimen/padding_Too_Large"
+                            android:paddingTop="@dimen/padding_Small"
+                            android:paddingBottom="@dimen/padding_Small"
+                            android:textStyle="bold"
+                            android:hint="Fats"
+                            android:textColorHint="@color/colorHint"
+                            android:fontFamily="serif-monospace"
+                            android:textSize="@dimen/text_Size_Default"
+                            tools:ignore="HardcodedText,LabelFor" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/bmr_Fats_content_id"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:paddingTop="@dimen/padding_Small"
+                            android:paddingBottom="@dimen/padding_Medium"
+                            android:paddingStart="@dimen/padding_Medium"
+                            android:paddingEnd="@dimen/padding_Medium"
+                            android:textColor="@color/colorWhite"
+                            android:textStyle="bold"
+                            android:fontFamily="serif-monospace"
+                            android:textSize="@dimen/text_Size_Medium"
+                            tools:ignore="HardcodedText,LabelFor" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </androidx.cardview.widget.CardView>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/cancel_dialog_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:padding="@dimen/padding_Too_Small"
+        android:background="@drawable/shape_rect_round"
+        app:srcCompat="@drawable/ic_cancel"
+        tools:ignore="ContentDescription" />
+
+</RelativeLayout>

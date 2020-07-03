@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<shape
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval">
+
+    <stroke
+        android:color="#fff"
+        android:width="@dimen/_2sdp"/>
+
+    <size
+        android:width="@dimen/icon_Size_Large"
+        android:height="@dimen/icon_Size_Large"/>
+
+    <gradient
+        android:startColor="@color/colorAccent"
+        android:centerColor="@color/colorPaste"
+        android:endColor="@color/colorAccent"
+        android:gradientRadius="@dimen/_120sdp"
+        android:type="radial" />
+</shape>
